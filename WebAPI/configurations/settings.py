@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+import django
+from django.utils.encoding import force_str
+django.utils.encoding.force_text = force_str
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -45,8 +49,11 @@ EXTERNAL_APPS = (
 )
 
 LOCAL_APPS = (
-    'app_dir.user',
     'app_dir.module',
+    'app_dir.user',
+
+    # 'tinymce',
+    # 'email_signals',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + EXTERNAL_APPS + LOCAL_APPS

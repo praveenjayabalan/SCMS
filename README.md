@@ -57,14 +57,14 @@ Install dependancies
     $ pip install -r requirements.txt
 Make migrations & migrate
 
-    $ python manage.py makemigrations && python manage.py migrate
+    $ python3 manage.py makemigrations && python3 manage.py migrate
 Create Super user
     
-    $ python manage.py createsuperuser
+    $ python3 manage.py createsuperuser
 
 ### Launching the app
-    $ python manage.py runserver
+    $ python3 manage.py runserver
 
 ### Run Tests
-    $ python manage.py test
+    $ python3 manage.py test
 

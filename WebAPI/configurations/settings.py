@@ -52,8 +52,6 @@ LOCAL_APPS = (
     'app_dir.module',
     'app_dir.user',
 
-    # 'tinymce',
-    # 'email_signals',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + EXTERNAL_APPS + LOCAL_APPS
@@ -173,3 +171,9 @@ REST_FRAMEWORK = {
     ),
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '' #sender's email-id
+EMAIL_HOST_PASSWORD = '' #password associated with above email-id

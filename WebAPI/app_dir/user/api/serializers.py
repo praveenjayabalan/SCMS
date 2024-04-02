@@ -1,5 +1,8 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
+from .signals import (
+    welcome_email
+)   
 
 User = get_user_model()
 
@@ -26,6 +29,8 @@ class UserSerializer(serializers.ModelSerializer):
         )
         user_obj.set_password(password)
         user_obj.save()
+
+        welcome_email.send(sender=self.__class__,username =username, email=email,request=self)
         return validated_data
 
     def update(self, instance, validated_data):

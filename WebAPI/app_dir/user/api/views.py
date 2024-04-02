@@ -37,6 +37,8 @@ class UserCreateAPIView(CreateAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = User.objects.all()
 
+    
+
 
 class UserDetailAPIView(RetrieveAPIView):
     queryset = User.objects.all()

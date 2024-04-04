@@ -11,3 +11,6 @@ urlpatterns = [
     path('api/module/', include(('app_dir.module.api.urls', 'module_api'), namespace='module_api'))
 ]
 
+admin.site.site_header = 'SCMS'
+admin.site.site_title = 'SCMS'
+
